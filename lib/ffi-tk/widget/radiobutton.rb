@@ -1,5 +1,5 @@
 module Tk
-  class RadioButton
+  class RadioButton < Button
     include Cget, Configure
 
     def initialize(parent, options = {})

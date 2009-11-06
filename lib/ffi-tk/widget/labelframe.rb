@@ -1,5 +1,5 @@
 module Tk
-  class LabelFrame
+  class LabelFrame < Frame
     include Cget, Configure
 
     def initialize(parent, options = {})

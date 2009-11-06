@@ -1,11 +1,11 @@
 module Tk
   # Create and manipulate checkbutton widgets
-  class CheckButton
+  class CheckButton < Button
     include Cget, Configure
 
     def initialize(parent, options = {})
       @parent = parent
-      Tk.execute('checkbutton', assign_pathname, options.to_tcl_options)
+      Tk.execute('checkbutton', assign_pathname, option_hash_to_tcl(options))
     end
 
     # Deselects the checkbutton and sets the associated variable to its “off”
